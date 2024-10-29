@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { SlideShowComponent } from './components/slide-show/slide-show.component';
+import { AccessibleCarouselComponent } from "./components/accessible-carousel/accessible-carousel.component"; // Adjust path as necessary
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [CarouselComponent, AccessibleCarouselComponent, SlideShowComponent], // Import the CarouselComponent here
 })
-export class AppComponent {
-  title = 'caro';
-}
+export class AppComponent {}

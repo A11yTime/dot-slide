@@ -1,0 +1,54 @@
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    height: 400px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+  }
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%; /* Width for three images */
+  }
+  .carousel-item {
+    min-width: 100%; /* Show one image at a time */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Start as invisible */
+    transition: opacity 0.5s ease-in-out;
+  }
+  .carousel-item.active {
+    opacity: 1; /* Make active slide visible */
+  }
+  .carousel-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .carousel-button {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .prev {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .next {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .pause-play-button {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }

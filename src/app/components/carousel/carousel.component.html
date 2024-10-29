@@ -1,0 +1,13 @@
+<div class="carousel" role="region" aria-label="Image Carousel" tabindex="0">
+    <div class="carousel-track" aria-live="polite" [style.transform]="'translateX(-' + (currentIndex * 100) + '%)'">
+      <div *ngFor="let item of items; let i = index" class="carousel-item" [attr.aria-hidden]="!isActive(i)">
+        <img [src]="item.src" [alt]="item.alt">
+      </div>
+    </div>
+    <button class="carousel-button prev" aria-label="Previous slide" (click)="moveSlide(-1)">❮</button>
+    <button class="carousel-button next" aria-label="Next slide" (click)="moveSlide(1)">❯</button>
+    <button class="carousel-button pause" aria-label="Pause/Play" (click)="togglePause()">
+      {{ isPaused ? 'Play' : 'Pause' }}
+    </button>
+  </div>
+  

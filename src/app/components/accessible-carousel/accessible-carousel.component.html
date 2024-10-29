@@ -1,0 +1,12 @@
+<div class="carousel" role="region" aria-label="Image Carousel" tabindex="0">
+    <div class="carousel-track" [style.transform]="transform">
+      <div *ngFor="let image of displayedImages" class="carousel-item">
+        <img [src]="image.src" [alt]="image.alt" />
+      </div>
+    </div>
+    <button class="carousel-button prev" (click)="prev()" aria-label="Previous slide">❮</button>
+    <button class="carousel-button next" (click)="next()" aria-label="Next slide">❯</button>
+    <button class="carousel-button pause-play-button" (click)="toggleAutoRotation()" aria-label="Toggle auto-rotation">
+      {{ isAutoRotating ? 'Pause' : 'Play' }}
+    </button>
+  </div>
