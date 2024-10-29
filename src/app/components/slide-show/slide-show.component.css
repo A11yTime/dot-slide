@@ -15,4 +15,38 @@
   .active {
     background-color: #717171;
   }
+
+  .slideshow-container {
+    position: relative; /* Allows absolutely positioned children */
+  }
+  
+  .slideshow-container:hover .play-pause-button,
+  .slideshow-container:focus-within .play-pause-button {
+    opacity: 1; /* Make visible on hover or focus */
+    visibility: visible; /* Make it visible */
+    pointer-events: auto; /* Enable interaction */
+  }
+  
+  .play-pause-button {
+    position: absolute; /* Position the button absolutely */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the left */
+    padding: 10px 15px; /* Padding around the text */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    pointer-events: none; /* Prevent interaction when hidden */
+  }
+  
+  .play-pause-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+  }
+  
+  
   

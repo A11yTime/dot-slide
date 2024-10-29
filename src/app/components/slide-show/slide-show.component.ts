@@ -23,8 +23,7 @@ export class SlideShowComponent implements OnInit, AfterViewInit, OnDestroy {
   slideIndex = 0;
   intervalId: any;
   isPlaying = true; // Property to track play/pause state
-  ariaLive = 'off'; // Initial aria-live state
-
+  ariaLive = 'off'; // Initial aria-live state 
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
